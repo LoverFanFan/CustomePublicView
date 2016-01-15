@@ -8,6 +8,7 @@
 
 #import "PublicTopicViewController.h"
 #import "SelectedPhotoViewController.h"
+#import "EditSeletedPhotoView.h"
 
 
 #import "PublicTopicViewController.h"
@@ -18,7 +19,7 @@
 #define kToolbarHeight (26 + 46)
 
 
-@interface PublicTopicViewController ()<UITextFieldDelegate,UITextViewDelegate>
+@interface PublicTopicViewController ()<UITextFieldDelegate,UITextViewDelegate,EditSeletedPhotoViewDelegate>
 {
     UITextField       *_titleTF;
     UITextView        *_textView;
@@ -46,6 +47,7 @@
     UIButton          *_tempBtn;
     NSString          *_videothumbPath;
     NSUInteger        _photoError;
+    EditSeletedPhotoView *_photoView;
 }
 
 @end
@@ -187,10 +189,24 @@
         SelectedPhotoViewController *selectPhotoVC = [[SelectedPhotoViewController alloc]init];
         [selectPhotoVC setBlock:^(NSMutableArray *imageArray){
             
-            if (imageArray) {
-                
-                
+            if (_photoView) {
+                [_photoView removeFromSuperview];
+                _photoView = nil;
             }
+            
+            if (imageArray)
+                _imageArray = [NSMutableArray arrayWithArray:imageArray];
+            _photoView = [[EditSeletedPhotoView alloc]initWithFrame:CGRectMake(0, ScreenHeight-200, ScreenWidth, 200) withImageArray:_imageArray];
+            _photoView.bottom   = ScreenHeight;
+            _photoView.delegate = self;
+            [self.view addSubview:_photoView];
+            _toolbar.bottom = _photoView.top;
+            if (_imageArray.count > 0) {
+                _redlabel.hidden = NO;
+                _redlabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_imageArray.count];
+            }
+            else
+                _redlabel.hidden = YES;
             
         }];
         [self.navigationController presentViewController:selectPhotoVC animated:YES completion:nil];
@@ -208,6 +224,51 @@
     else{                                   // 音频
       
     }
+}
+
+#pragma mark - Delegate
+
+#pragma mark - EditSelectedViewDelegate
+-(void)updatePhotoNum:(NSUInteger)photoNum{
+    
+    if(photoNum>0){
+        
+        _redlabel.hidden = NO;
+        _redlabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)photoNum];
+    }
+    else
+        _redlabel.hidden = YES;
+}
+
+
+-(void)addPhotoAction:(NSMutableArray *)array{
+    
+    _imageArray = [[NSMutableArray alloc]initWithArray:array];
+    
+    SelectedPhotoViewController *selectPhotoVC = [[SelectedPhotoViewController alloc]init];
+    selectPhotoVC.assetArray = _imageArray;
+    [self.navigationController presentViewController:selectPhotoVC animated:YES completion:nil];
+    [selectPhotoVC setBlock:^(NSMutableArray *imageArray){
+        
+        if(_photoView){
+            
+            [_photoView removeFromSuperview];
+            _photoView = nil;
+        }
+        if(imageArray)
+            _imageArray = [NSMutableArray arrayWithArray:imageArray];
+        _photoView = [[EditSeletedPhotoView alloc]initWithFrame:CGRectMake(0, ScreenHeight-200, ScreenWidth, 200) withImageArray:_imageArray];
+        _photoView.bottom = ScreenHeight;
+        _photoView.delegate = self;
+        [self.view addSubview:_photoView];
+        _toolbar.bottom = _photoView.top;
+        if([_imageArray count] > 0){
+            _redlabel.hidden = NO;
+            _redlabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)[_imageArray count]];
+        }
+        else
+            _redlabel.hidden = YES;
+    }];
 }
 
 

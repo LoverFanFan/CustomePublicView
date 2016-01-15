@@ -54,6 +54,7 @@
 		0D6372DD1C48C5AC00000BFA /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6372DC1C48C5AC00000BFA /* PhotoCollectionViewCell.m */; };
 		0D6372E31C48CE8200000BFA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6372E21C48CE8200000BFA /* AssetsLibrary.framework */; };
 		0D6372E51C48CE9A00000BFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6372E41C48CE9A00000BFA /* Foundation.framework */; };
+		0D6372EB1C48F4FE00000BFA /* EditSeletedPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6372EA1C48F4FE00000BFA /* EditSeletedPhotoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,8 @@
 		0D6372DC1C48C5AC00000BFA /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		0D6372E21C48CE8200000BFA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		0D6372E41C48CE9A00000BFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D6372E91C48F4FE00000BFA /* EditSeletedPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSeletedPhotoView.h; sourceTree = "<group>"; };
+		0D6372EA1C48F4FE00000BFA /* EditSeletedPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSeletedPhotoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,12 +157,9 @@
 				0D0878DA1C47376000A2314F /* ViewController.m */,
 				0D0878EA1C47379A00A2314F /* PublicTopicViewController.h */,
 				0D0878EB1C47379A00A2314F /* PublicTopicViewController.m */,
-				0D6372871C488CA700000BFA /* UIViewExt.h */,
-				0D6372881C488CA700000BFA /* UIViewExt.m */,
 				0D6372D21C48B92400000BFA /* SelectedPhotoViewController.h */,
 				0D6372D31C48B92400000BFA /* SelectedPhotoViewController.m */,
-				0D6372DB1C48C5AC00000BFA /* PhotoCollectionViewCell.h */,
-				0D6372DC1C48C5AC00000BFA /* PhotoCollectionViewCell.m */,
+				0D6372E81C48F4BF00000BFA /* UIView */,
 				0D0878DC1C47376000A2314F /* Main.storyboard */,
 				0D0878DF1C47376000A2314F /* Assets.xcassets */,
 				0D0878E11C47376000A2314F /* LaunchScreen.storyboard */,
@@ -218,6 +218,19 @@
 				0D6372AC1C488DFF00000BFA /* publish_choose_not@3x.png */,
 			);
 			path = icons;
+			sourceTree = "<group>";
+		};
+		0D6372E81C48F4BF00000BFA /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0D6372871C488CA700000BFA /* UIViewExt.h */,
+				0D6372881C488CA700000BFA /* UIViewExt.m */,
+				0D6372DB1C48C5AC00000BFA /* PhotoCollectionViewCell.h */,
+				0D6372DC1C48C5AC00000BFA /* PhotoCollectionViewCell.m */,
+				0D6372E91C48F4FE00000BFA /* EditSeletedPhotoView.h */,
+				0D6372EA1C48F4FE00000BFA /* EditSeletedPhotoView.m */,
+			);
+			name = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +340,7 @@
 			files = (
 				0D0878DB1C47376000A2314F /* ViewController.m in Sources */,
 				0D0878D81C47376000A2314F /* AppDelegate.m in Sources */,
+				0D6372EB1C48F4FE00000BFA /* EditSeletedPhotoView.m in Sources */,
 				0D6372891C488CA700000BFA /* UIViewExt.m in Sources */,
 				0D6372D41C48B92400000BFA /* SelectedPhotoViewController.m in Sources */,
 				0D6372DD1C48C5AC00000BFA /* PhotoCollectionViewCell.m in Sources */,

@@ -49,7 +49,6 @@
 		0D6372CC1C488DFF00000BFA /* publish_choose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6372AA1C488DFF00000BFA /* publish_choose@3x.png */; };
 		0D6372CD1C488DFF00000BFA /* publish_choose_not@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6372AB1C488DFF00000BFA /* publish_choose_not@2x.png */; };
 		0D6372CE1C488DFF00000BFA /* publish_choose_not@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6372AC1C488DFF00000BFA /* publish_choose_not@3x.png */; };
-		0D6372D11C48B75A00000BFA /* SelectedPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6372D01C48B75A00000BFA /* SelectedPhotoView.m */; };
 		0D6372D41C48B92400000BFA /* SelectedPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6372D31C48B92400000BFA /* SelectedPhotoViewController.m */; };
 		0D6372DA1C48C25E00000BFA /* profile_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6372D91C48C25E00000BFA /* profile_back@2x.png */; };
 		0D6372DD1C48C5AC00000BFA /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6372DC1C48C5AC00000BFA /* PhotoCollectionViewCell.m */; };
@@ -106,8 +105,6 @@
 		0D6372AA1C488DFF00000BFA /* publish_choose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "publish_choose@3x.png"; sourceTree = "<group>"; };
 		0D6372AB1C488DFF00000BFA /* publish_choose_not@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "publish_choose_not@2x.png"; sourceTree = "<group>"; };
 		0D6372AC1C488DFF00000BFA /* publish_choose_not@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "publish_choose_not@3x.png"; sourceTree = "<group>"; };
-		0D6372CF1C48B75A00000BFA /* SelectedPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedPhotoView.h; sourceTree = "<group>"; };
-		0D6372D01C48B75A00000BFA /* SelectedPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedPhotoView.m; sourceTree = "<group>"; };
 		0D6372D21C48B92400000BFA /* SelectedPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedPhotoViewController.h; sourceTree = "<group>"; };
 		0D6372D31C48B92400000BFA /* SelectedPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedPhotoViewController.m; sourceTree = "<group>"; };
 		0D6372D91C48C25E00000BFA /* profile_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_back@2x.png"; sourceTree = "<group>"; };
@@ -159,8 +156,6 @@
 				0D0878EB1C47379A00A2314F /* PublicTopicViewController.m */,
 				0D6372871C488CA700000BFA /* UIViewExt.h */,
 				0D6372881C488CA700000BFA /* UIViewExt.m */,
-				0D6372CF1C48B75A00000BFA /* SelectedPhotoView.h */,
-				0D6372D01C48B75A00000BFA /* SelectedPhotoView.m */,
 				0D6372D21C48B92400000BFA /* SelectedPhotoViewController.h */,
 				0D6372D31C48B92400000BFA /* SelectedPhotoViewController.m */,
 				0D6372DB1C48C5AC00000BFA /* PhotoCollectionViewCell.h */,
@@ -332,7 +327,6 @@
 			files = (
 				0D0878DB1C47376000A2314F /* ViewController.m in Sources */,
 				0D0878D81C47376000A2314F /* AppDelegate.m in Sources */,
-				0D6372D11C48B75A00000BFA /* SelectedPhotoView.m in Sources */,
 				0D6372891C488CA700000BFA /* UIViewExt.m in Sources */,
 				0D6372D41C48B92400000BFA /* SelectedPhotoViewController.m in Sources */,
 				0D6372DD1C48C5AC00000BFA /* PhotoCollectionViewCell.m in Sources */,

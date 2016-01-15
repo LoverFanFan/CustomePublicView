@@ -173,7 +173,6 @@
 - (void)_buttonClicked:(UIButton *)button {
     
     _tempBtn = button;
-    
     if(button != _toolbarEmoticonButton){
         
         if([_textView isFirstResponder])
@@ -188,7 +187,10 @@
         SelectedPhotoViewController *selectPhotoVC = [[SelectedPhotoViewController alloc]init];
         [selectPhotoVC setBlock:^(NSMutableArray *imageArray){
             
-            
+            if (imageArray) {
+                
+                
+            }
             
         }];
         [self.navigationController presentViewController:selectPhotoVC animated:YES completion:nil];
@@ -237,10 +239,6 @@
     if([_textView isFirstResponder])
         _toolbarvoiceButton.enabled = YES;
     
-    //    if(_tempBtn == _toolbarPictureButton && _photoView)
-    //        _toolbar.bottom = _photoView.top;
-    //    else if(_tempBtn == _toolbarvideoButton && _videoView)
-    //        _toolbar.bottom = _videoView.top;
 }
 
 

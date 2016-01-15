@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "PublicTopicViewController.h"
 
-@interface ViewController ()
+
+
+@interface ViewController ()<UITextFieldDelegate,UITextViewDelegate>
+
 
 @end
 
@@ -16,12 +20,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.title = @"发布界面";
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(20, 100, 200, 40);
+    [btn setTitle:@"去发布" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(gotoPublicView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)gotoPublicView{
+    
+    PublicTopicViewController *pVC = [[PublicTopicViewController alloc]init];
+    [self.navigationController pushViewController:pVC animated:YES];
+    
 }
+
+
 
 @end
